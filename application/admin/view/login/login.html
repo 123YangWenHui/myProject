@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>登陆</title>
+<link href="__STATIC__/css/bootstrap.min.css" title="" rel="stylesheet" />
+<link title="orange" href="__STATIC__/css/login.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+
+<body>
+  
+  <div style="height:1px;"></div>
+  <div class="login">
+     <header>
+	    <h1>登陆</h1>
+	 </header>
+	 <div class="sr">
+	 	<form action="login" method="post">
+		    <div class="name">
+				<label>
+				<i class="sublist-icon glyphicon glyphicon-user"></i>
+				</label>
+				<input type="text"  placeholder="这里输入登录名" class="name_inp" name="login_name">
+			</div>
+			<div class="name">
+				<label>
+				<i class="sublist-icon glyphicon glyphicon-pencil"></i>
+				</label>
+				<input type="text"  placeholder="这里输入登录密码" class="name_inp" name="login_pwd">
+			</div>
+			<div class="name" >
+				<div class="gai_name">
+					<label>
+					<i class="sublist-icon glyphicon glyphicon-bookmark"></i>
+					</label>
+					<input type="text"  placeholder="这里输入验证码" class="name_inp gai_name_inp" name="checkNum">
+				</div>
+				<div class="gai_name">
+					<img src="{:captcha_src()}" alt="captcha" class="gai_checkNum" onclick="this.src=this.src+'?'+Math.random()"/>
+				</div>
+			</div>
+			<button class="dl" >登录</button>
+		</form>
+	 </div>
+  </div>
+
+
+</body>
+<script  src="__STATIC__/js/index.js"></script>
+<script  src="__STATIC__/js/jquery-2.1.1.min.js"></script>
+</html>
